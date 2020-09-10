@@ -1,0 +1,62 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/fonts/titleImage.png" type="Texture" id=1]
+[ext_resource path="res://Menu.gd" type="Script" id=2]
+
+[node name="Menu" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="background" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0.0627451, 0.592157, 0.694118, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="createServer" type="Button" parent="."]
+margin_left = 332.333
+margin_top = 218.138
+margin_right = 687.333
+margin_bottom = 310.138
+text = "Create Server"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="joinServer" type="Button" parent="."]
+margin_left = 333.236
+margin_top = 480.228
+margin_right = 688.236
+margin_bottom = 572.228
+text = "Join Server"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="serverIP" type="TextEdit" parent="joinServer"]
+margin_left = 70.5775
+margin_top = -91.125
+margin_right = 276.577
+margin_bottom = -56.125
+text = "75.100.207.205"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="serverPort" type="TextEdit" parent="joinServer"]
+margin_left = 71.0
+margin_top = -47.0
+margin_right = 276.0
+margin_bottom = -11.0
+text = "25565"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="title" type="Sprite" parent="."]
+position = Vector2( 511.445, 103.222 )
+scale = Vector2( 1.68372, 2.04757 )
+texture = ExtResource( 1 )
+[connection signal="pressed" from="createServer" to="." method="_on_createServer_pressed"]
+[connection signal="pressed" from="joinServer" to="." method="_on_joinServer_pressed"]

@@ -1,0 +1,67 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Lobby.gd" type="Script" id=2]
+
+[node name="Lobby" type="Node2D"]
+position = Vector2( 380, 187.15 )
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -380.0
+margin_top = -188.0
+margin_right = 653.0
+margin_bottom = 420.0
+color = Color( 0.00392157, 0.105882, 0.101961, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="connectedPlayers" type="RichTextLabel" parent="."]
+margin_left = 21.0
+margin_top = 91.0
+margin_right = 236.0
+margin_bottom = 168.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="serverIP" type="RichTextLabel" parent="."]
+margin_left = 21.0
+margin_top = 18.0
+margin_right = 233.0
+margin_bottom = 37.0
+text = "0.0.0.0.0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="serverPort" type="RichTextLabel" parent="."]
+margin_left = 22.4649
+margin_top = 34.3625
+margin_right = 111.465
+margin_bottom = 56.3625
+text = "25565"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="playerListLabel" type="Label" parent="."]
+margin_left = 21.4123
+margin_top = 69.5161
+margin_right = 151.412
+margin_bottom = 90.5161
+text = "Connected Players:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="playButton" type="Button" parent="."]
+margin_left = -110.073
+margin_top = 247.103
+margin_right = 297.927
+margin_bottom = 344.103
+text = "PLAY"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="playButton" to="." method="_on_playButton_pressed"]
